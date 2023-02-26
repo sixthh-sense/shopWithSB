@@ -1,4 +1,4 @@
-package demo.mall.shopWithSB;
+package demo.mall;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

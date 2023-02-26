@@ -1,4 +1,4 @@
-package demo.mall.shopWithSB;
+package demo.mall;
 
 import lombok.Getter;
 import lombok.Setter;
