@@ -1,4 +1,4 @@
-package demo.mall;
+package demo.mall.shopWithSB;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @GetMapping(value = "test")
+    @GetMapping(value = "/test")
     public UserDto test() {
 
         UserDto userDto = new UserDto();
@@ -16,7 +16,7 @@ public class TestController {
         return userDto;
     }
 
-    @GetMapping(value = "test2")
+    @GetMapping(value = "/test2")
     public String test2() {
         return "12345";
     }
