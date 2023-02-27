@@ -11,6 +11,14 @@ public interface ItemRepository extends JpaRepository<Item, Long> {
     * void delete(T entity)
     * count()
     * Iterable<T> findAll()
+    *
+    * 기타 메소드 형태는 JPA 사이트에서 검색할 것
     * */
     List<Item> findByItemNm(String itemNm);
+    List<Item> findByItemNmOrItemDetail(String itemNm, String itemDetail);
+    List<Item> findByPriceLessThan(Integer price);
+    List<Item> findByPriceLessThanOrderByPriceDesc(Integer price);
+
+
+
 }
