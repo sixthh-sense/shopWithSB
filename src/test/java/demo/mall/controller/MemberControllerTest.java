@@ -31,14 +31,14 @@ class MemberControllerTest {
     @Autowired
     PasswordEncoder passwordEncoder;
 
-    public Member createMember(String email, String password){ // 왜 void가 아닌지 모르겠음
+    public void createMember(String email, String password){ // 왜 void가 아닌지 모르겠음
         MemberFormDto memberFormDto = new MemberFormDto();
         memberFormDto.setEmail(email);
         memberFormDto.setName("홍길동");
         memberFormDto.setAddress("서울시 마포구 합정동");
         memberFormDto.setPassword(password);
         Member member = Member.createMember(memberFormDto, passwordEncoder);
-        return memberService.saveMember(member);
+        memberService.saveMember(member);
     }
 
     @Test
