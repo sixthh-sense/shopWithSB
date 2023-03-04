@@ -39,4 +39,14 @@ public class Item {
     private LocalDateTime regTime; // 상품 등록 시간
 
     private LocalDateTime updateTime; // 상품 수정 시간
+
+    /* 실무 사용 X only 참고용 다대다 매핑
+    @ManyToMany
+    @JoinTable(
+            name = "member_item",
+            joinColumns = @JoinColumn(name = "member_id"),
+            inverseJoinColumns = @JoinColumn(name = "item_id")
+    )
+    private List<Member> member;
+     */
 }
