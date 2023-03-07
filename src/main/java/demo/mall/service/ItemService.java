@@ -31,8 +31,16 @@ public class ItemService {
     // 왜 void가 아닌 걸까?
     public Long saveItem(ItemFormDto itemFormDto, List<MultipartFile> itemImgFileList) throws Exception {
         //상품 등록
-        Item item = itemFormDto.createItem();
-        itemRepository.save(item);
+        //(3/7)member, itemimg와 달리 dto에서 modellmapper를 이용해 객체를 구성, 저장하니 timestamp가 제대로 안 찍히는 문제 발생
+       Item item = itemFormDto.createItem();
+
+//        Item item = new Item();
+//        item.setItemNm(itemFormDto.getItemNm());
+//        item.setPrice(itemFormDto.getPrice());;
+//        item.setItemDetail(itemFormDto.getItemDetail());
+//        item.setStockNumber(itemFormDto.getStockNumber());
+//        item.setItemSellStatus(itemFormDto.getItemSellStatus());
+//        itemRepository.save(item);
 
         //이미지 등록
         for(int i=0;i<itemImgFileList.size();i++){

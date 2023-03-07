@@ -18,7 +18,7 @@ public class Item extends BaseEntity{
 
     @Id
     @Column(name = "item_id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; // 상품 코드(long이 아니라 Long으로 한 이유?)
 
     @Column(nullable = false, length = 50)
@@ -37,9 +37,9 @@ public class Item extends BaseEntity{
     @Enumerated(EnumType.STRING)
     private ItemSellStatus itemSellStatus; // 상품 판매 상태
 
-    private LocalDateTime regTime; // 상품 등록 시간
+    //private LocalDateTime regTime; // 상품 등록 시간
 
-    private LocalDateTime updateTime; // 상품 수정 시간
+    //private LocalDateTime updateTime; // 상품 수정 시간
 
     /* 실무 사용 X only 참고용 다대다 매핑
     @ManyToMany
