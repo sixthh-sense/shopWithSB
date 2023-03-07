@@ -24,7 +24,7 @@ public class ItemImg extends BaseEntity {
 
     private String repImgYn; // 대표 이미지 여부
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST) // cascade가 없으면 TransientPropertyValueException
     @JoinColumn(name = "item_id")
     private Item item;
 
